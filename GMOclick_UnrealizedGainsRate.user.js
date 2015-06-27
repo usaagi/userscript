@@ -4,7 +4,7 @@
 // @namespace   usagi2
 // @include     https://kabu.click-sec.com/sec1-1/kabu/tatePositionList.do
 // @version     0.1
-// @downloadURL 
+// @downloadURL https://github.com/usagi2/userscript/raw/master/GMOclick_UnrealizedGainsRate.user.js
 // @run-at      document-end
 // ==/UserScript==
 'use strict';
