@@ -5,6 +5,7 @@
 // @include     https://kabu.click-sec.com/sec1-1/kabu/tatePositionList.do
 // @version     0.2
 // @downloadURL https://github.com/usagi2/userscript/raw/master/GMOclick_UnrealizedGainsRate.user.js
+// @grant       none
 // @run-at      document-end
 // ==/UserScript==
 'use strict';
