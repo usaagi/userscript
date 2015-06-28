@@ -2,7 +2,7 @@
 // @name        GMOクリック信用建玉に評価損益率を表示
 // @description GMOクリック証券の信用建玉一覧に評価損益率を表示します。(サマリー表示のチェックが付いてると動作しません)
 // @namespace   usagi2
-// @include     https://kabu.click-sec.com/sec1-1/kabu/tatePositionList.do
+// @include     https://kabu.click-sec.com/sec1-*/kabu/tatePositionList.do
 // @version     0.4
 // @downloadURL https://github.com/usagi2/userscript/raw/master/GMOclick_UnrealizedGainsRate.user.js
 // @grant       none
