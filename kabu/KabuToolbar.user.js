@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.6.5
+// @version     0.6.6
 // @run-at      document-end
 // @downloadURL https://github.com/usagi2/userscript/raw/master/kabu/KabuToolbar.user.js
 // ==/UserScript==
@@ -104,10 +104,6 @@ var LINKS = [
     url: 'http://karauri.net/{code}/',
   },
   {
-    title: '日証金',
-    url: 'http://www.jsf.co.jp/de/stock/data.php?target=balance&div=%93%8C%8F%D8&code={code}',
-  },
-  {
     title: 'FISCO',
     url: 'https://web.fisco.jp/FiscoPFApl/CompanyTopWeb?brndCd=0{code}00',
   },
@@ -158,6 +154,7 @@ var LINKS = [
     url: 'http://minkabu.jp/stock/{code}/news',
   },
   */
+  // TODO: 日証金の速報系
 ];
 
 /**
