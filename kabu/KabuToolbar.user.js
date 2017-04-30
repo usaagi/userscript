@@ -219,7 +219,7 @@ function run(siteinfo)
   var div = document.createElement('div');
   div.innerHTML = link.join(' | ');
   // style
-  div.setAttribute('style', 'padding: 5px; width: 100%; text-align: center;');
+  div.setAttribute('style', 'padding: 5px; width: 100%; text-align: center; font-size: 13px;');
   // 上部に表示させるには insertBefore 下部は appendChild
   document.body.appendChild(div, document.body.firstChild);
 }
