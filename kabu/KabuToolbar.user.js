@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.6.6
+// @version     0.6.7
 // @run-at      document-end
 // @downloadURL https://github.com/usagi2/userscript/raw/master/kabu/KabuToolbar.user.js
 // ==/UserScript==
@@ -129,11 +129,6 @@ var LINKS = [
     url: 'https://toushi.kankei.me/c/{code}',
   },
   {
-    // 直感型企業分析システム ValuationMatrix
-    title: '企業分析',
-    url: 'http://valuationmatrix.com/companies/{code}',
-  },
-  {
     title: '決算プロ',
     url: 'http://ke.kabupro.jp/xbrl/{code}.htm',
   },
@@ -152,6 +147,11 @@ var LINKS = [
   {
     title: 'ニュース(みんかぶ)',
     url: 'http://minkabu.jp/stock/{code}/news',
+  },
+  {
+    // 直感型企業分析システム ValuationMatrix (更新されてない)
+    title: '企業分析',
+    url: 'http://valuationmatrix.com/companies/{code}',
   },
   */
   // TODO: 日証金の速報系
