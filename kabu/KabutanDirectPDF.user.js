@@ -4,8 +4,8 @@
 // @namespace   usagi2
 // @include     http://kabutan.jp/disclosures/pdf/*/*/
 // @run-at      document-start
-// @downloadURL https://github.com/usagi2/userscript/raw/master/kabu/KabutanDirectPDF.user.js
-// @version     0.1.5
+// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/kabu/KabutanDirectPDF.user.js
+// @version     0.1.6
 // ==/UserScript==
 
 'use strict';
