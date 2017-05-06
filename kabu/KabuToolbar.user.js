@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.6.7
+// @version     0.6.8
 // @run-at      document-end
 // @downloadURL https://github.com/usagi2/userscript/raw/master/kabu/KabuToolbar.user.js
 // ==/UserScript==
@@ -76,8 +76,12 @@ var LINKS = [
   */
   // 有名なとこ
   {
-    title: 'Yahoo!',
+    title: 'Y!',
     url: 'https://stocks.finance.yahoo.co.jp/stocks/detail/?code={code}',
+  },
+  {
+    title: '掲示板',
+    url: 'http://messages.yahoo.co.jp/?action=q&board={code}',
   },
   {
     title: 'ニュース(株探)',
