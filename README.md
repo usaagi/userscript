@@ -4,8 +4,8 @@
 
 # userscript
 ## 投資
-- [株探のPDFを直接表示](https://github.com/usagi2/userscript/raw/master/kabu/KabutanDirectPDF.user.js)
-- [株ツールバー](https://github.com/usagi2/userscript/raw/master/kabu/KabuToolbar.user.js)
+- [株探のPDFを直接表示](https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabutanDirectPDF.user.js)
+- [株ツールバー](https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabuToolbar.user.js)
 
 # その他
 githubというかgitすら使い方よく分かってませんがuserscriptはすべてgithubで公開することにしました。
