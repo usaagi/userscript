@@ -22,17 +22,17 @@
 const STYLE = 'padding: 5px; width: 100%; text-align: center; font-size: 14px;'
 
 /**
- * ツールバーを表示させるサイト
- * (\d{4}) で銘柄コードを取得する
- * 頻度の高いサイトを最初に配置するとよし
- * ※ ここにサイトを追加したら @include にも追加すること
- * urlの指定方法:
- *  URLの . や ? などはエスケープすること。正規表現リテラルは / も。 前方後方一致の ^$ は必要に応じて指定
- *  例 http://sample.com/4565 の場合
- *  正規表現リテラル:  /http:\/\/sample\.com/(\d{4})/           / をエスケープするのでかなり見辛い
- *  文字列:         "http://sample\.com/(\\d{4})"            \d などは \\d とすること
- *  テンプレート文字列: String.raw`http://sample\.com/(\d{4})`   最小限のエスケープで済む (必ず String.raw`` で囲む)
- */
+ ツールバーを表示させるサイト
+ (\d{4}) で銘柄コードを取得する
+ 頻度の高いサイトを最初に配置するとよし
+ ※ ここにサイトを追加したら @include にも追加すること
+ urlの指定方法:
+  URLの . や ? などはエスケープすること。正規表現リテラルは / も。 前方後方一致の ^$ は必要に応じて指定
+  例 http://sample.com/4565 の場合
+  正規表現リテラル:   /http:\/\/sample\.com/(\d{4})/           / をエスケープするのでかなり見辛い
+  文字列:             "http://sample\\.com/(\\d{4})"            \d などは \\d とすること
+  テンプレート文字列: String.raw`http://sample\.com/(\d{4})`   最小限のエスケープで済む (必ず String.raw`` で囲む)
+*/
 const SITES = [
   {	// yahoo ファイナンス
     url: String.raw`https://stocks\.finance\.yahoo\.co\.jp/stocks/.*/\?code=(\d{4})`,
