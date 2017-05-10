@@ -11,9 +11,9 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.2
+// @version     0.7.3
 // @run-at      document-end
-// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabutanDirectPDF.user.js
+// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabuToolbar.user.js
 // ==/UserScript==
 
 (function () {
