@@ -19,7 +19,8 @@
 (function () {
 'use strict';
 
-const STYLE = 'padding: 5px; width: 100%; text-align: center; font-size: 14px;'
+// div style
+const STYLE = 'padding: 5px; margin-bottom: 15px; width: 100%; text-align: center; font-size: 14px;'
 
 /**
  ツールバーを表示させるサイト
@@ -30,7 +31,7 @@ const STYLE = 'padding: 5px; width: 100%; text-align: center; font-size: 14px;'
   URLの . や ? などはエスケープすること。正規表現リテラルは / も。 前方後方一致の ^$ は必要に応じて指定
   例 http://sample.com/4565 の場合
   正規表現リテラル:   /http:\/\/sample\.com/(\d{4})/           / をエスケープするのでかなり見辛い
-  文字列:             "http://sample\\.com/(\\d{4})"            \d などは \\d とすること
+  文字列:             "http://sample\\.com/(\\d{4})"           / のエスケープは不要だが \d などは \\d とすること
   テンプレート文字列: String.raw`http://sample\.com/(\d{4})`   最小限のエスケープで済む (必ず String.raw`` で囲む)
 */
 const SITES = [
@@ -163,18 +164,18 @@ function run(siteinfo)
     location.href = get_redirect_url(siteinfo, code);
   }
 
+
   let showLinks = [];
+  
   for (let link of LINKS) {
-    if (!link[0] || !link[1]) {
+    let [ title, url ] = link;
+
+    if (url.indexOf(location.hostname) !== -1) {
       continue;
     }
-
-    if (link[1].indexOf(location.hostname) !== -1) {
-      continue;
-    }
-
-    let url = replaceCode(link[1], code)
-    showLinks.push(`<a href="${url}" target="_blank">${link[0]}</a>`);
+    
+    url = replaceCode(url, code);
+    showLinks.push(`<a href="${url}" target="_blank">${title}</a>`);
   }
 
   let div = document.createElement('div');
