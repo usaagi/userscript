@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.1
+// @version     0.7.2
 // @run-at      document-end
 // @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabutanDirectPDF.user.js
 // ==/UserScript==
@@ -91,13 +91,12 @@ const LINKS = [
   // 需給
   [ '空売り',   'http://karauri.net/{code}/' ],
   [ 'FISCO',    'https://web.fisco.jp/FiscoPFApl/CompanyTopWeb?brndCd=0{code}00' ],
-  [ '株テク',   'http://www.kabutec.jp/company/fs_{code}.html' ],
+  [ '株テク',   'http://www.kabutec.jp/company/fs_{code}.html' ],  // EBITDAとか
   // 大株主
   [ 'EDINET',   'https://disclosure.edinet-fsa.go.jp/E01EW/BLMainController.jsp?uji.verb=W1E63010CXW1E6A010DSPSch&uji.bean=ee.bean.parent.EECommonSearchBean&TID=W1E63011&PID=W1E63010&SESSIONKEY=1436004792327&lgKbn=2&pkbn=0&skbn=0&dskb=&dflg=0&iflg=0&preId=1&row=100&idx=0&syoruiKanriNo=&mul={code}&fls=on&lpr=on&oth=on&cal=1&era=H&yer=&mon=&pfs=4' ],
   [ '株主プロ', 'http://www.kabupro.jp/code/{code}.htm' ],
   [ '大量保有', 'https://maonline.jp/shareholding_reports?utf8=%E2%9C%93&query%5Bfildate_gteq%5D=&query%5Bfildate_lteq%5D=&query%5Bisname_or_issyokencode_or_company_edname_or_company_cpname_cont%5D={code}&query%5Bcompany_edgyosyucode_in%5D%5B%5D=&query%5Bholdingname_or_holdingcode_cont%5D=' ],
   [ '有報速報', 'https://toushi.kankei.me/c/{code}' ],
-  [ '決算プロ', 'http://ke.kabupro.jp/xbrl/{code}.htm' ],
   [ 'Mstar',    'http://portal.morningstarjp.com/StockInfo/info/index/{code}' ], // 指標
    // http://www.morningstar.co.jp/StockInfo/info/fund/{code}', // ファンド組入
   [ 'ロイター', 'http://jp.reuters.com/investing/quotes/detail?symbol={code}.T' ], // 業界平均perなど
