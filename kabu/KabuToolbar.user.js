@@ -13,8 +13,9 @@
 // @include     http://www.ullet.com/*.html
 // @version     0.7.3
 // @run-at      document-end
-// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabuToolbar.user.js
 // ==/UserScript==
+
+// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabuToolbar.user.js
 
 (function () {
 'use strict';
