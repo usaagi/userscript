@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.4
+// @version     0.7.5
 // @run-at      document-end
 // ==/UserScript==
 
@@ -34,14 +34,16 @@ const STYLE = 'padding: 5px; margin-bottom: 15px; width: 100%; text-align: cente
   正規表現リテラル:   /http:\/\/sample\.com/(\d{4})/           / をエスケープするのでかなり見辛い
   文字列:             "http://sample\\.com/(\\d{4})"           / のエスケープは不要だが \d などは \\d とすること
   テンプレート文字列: String.raw`http://sample\.com/(\d{4})`   最小限のエスケープで済む (必ず String.raw`` で囲む)
+  
+ xpathを指定すると銘柄コードっぽい部分を取り出す
 */
 const SITES = [
   {	// yahoo ファイナンス
     url: String.raw`https://stocks\.finance\.yahoo\.co\.jp/stocks/.*/\?code=(\d{4})`,
   },
   {   // yahoo textrem
-    url: String.raw`https://textream\.yahoo\.co\.jp/message/\d+/(\d{4})(/|/.*)?$`,
-  //    xpath: '//title',
+    url: String.raw`https://textream\.yahoo\.co\.jp/message/\d+/[\d\w]+(/.*)?$`,
+    xpath: '//title',
   },
   {   // 株探
     url: String.raw`https://kabutan\.jp/stock/.*\?code=(\d{4})`,
