@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.3
+// @version     0.7.4
 // @run-at      document-end
 // ==/UserScript==
 
@@ -103,15 +103,8 @@ const LINKS = [
   [ 'ロイター', 'http://jp.reuters.com/investing/quotes/detail?symbol={code}.T' ], // 業界平均perなど
   // 無効化中
   /*
-  {
-    title: 'ニュース(みんかぶ)',
-    url: 'http://minkabu.jp/stock/{code}/news',
-  },
-  {
-    // 直感型企業分析システム ValuationMatrix (更新されてない)
-    title: '企業分析',
-    url: 'http://valuationmatrix.com/companies/{code}',
-  },
+  [ 'ニュース(みんかぶ)', 'http://minkabu.jp/stock/{code}/news' ],
+  [ '企業分析', 'http://valuationmatrix.com/companies/{code}' ],   // 直感型企業分析システム ValuationMatrix (更新されてない)
   */
   // TODO: 日証金の速報系
 ];
