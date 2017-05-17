@@ -5,9 +5,7 @@
 // @include     http://kabutan.jp/disclosures/pdf/*/*/
 // @run-at      document-start
 // @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/kabu/KabutanDirectPDF.user.js
-// @version     0.1.6
+// @version     0.1.7
 // ==/UserScript==
-
-'use strict';
 
 location.href = location.href.replace('/kabutan.jp/disclosures/pdf/', '/211.6.211.247/tdnet/data/').replace(/\/$/, '.pdf');
