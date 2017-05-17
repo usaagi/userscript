@@ -21,7 +21,7 @@
 'use strict';
 
 // div style
-const STYLE = 'padding: 5px; margin-bottom: 15px; width: 100%; text-align: center; font-size: 14px;'
+const STYLE = 'padding: 5px; margin-bottom: 15px; width: 100%; text-align: center; font-size: 14px;';
 
 /**
  ツールバーを表示させるサイト
