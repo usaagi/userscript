@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        株探ダイレクトPDF
-// @description 株探内のPDFを従来のように直接表示します。戻るボタンが効かなくなるので新しいタブで開いてください。
+// @description 株探内のPDFを従来のように直接表示します。
 // @namespace   usagi2
 // @include     http://kabutan.jp/disclosures/pdf/*/*/
 // @run-at      document-start
