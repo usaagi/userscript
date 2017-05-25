@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name        株ツールバー
-// @description 株関連サイトで便利なリンクをページ下部に表示します。
+// @description 株関連サイトで便利なリンクをページ最下部に表示します。
 // @namespace   usagi2
 // @include     https://stocks.finance.yahoo.co.jp/stocks/*/?code=*
 // @include     https://textream.yahoo.co.jp/message/*/*
@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.6
+// @version     0.7.7
 // @run-at      document-end
 // ==/UserScript==
 
@@ -34,7 +34,7 @@ const STYLE = 'padding: 5px; margin-bottom: 15px; width: 100%; text-align: cente
   正規表現リテラル:   /http:\/\/sample\.com/(\d{4})/           / をエスケープするのでかなり見辛い
   文字列:             "http://sample\\.com/(\\d{4})"           / のエスケープは不要だが \d などは \\d とすること
   テンプレート文字列: String.raw`http://sample\.com/(\d{4})`   最小限のエスケープで済む (必ず String.raw`` で囲む)
-  
+
  xpathを指定すると銘柄コードっぽい部分を取り出す
 */
 const SITES = [
@@ -48,8 +48,7 @@ const SITES = [
   {   // 株探
     url: String.raw`https://kabutan\.jp/stock/.*\?code=(\d{4})`,
   },
-  {
-    // 株探 > 決算速報からのリンクを通常の決算ページにリダイレクト (決算速報だとperなどが表示されないので)
+  { // 株探 > 決算速報からのリンクを通常の決算ページにリダイレクト (決算速報だとperなどが表示されないので)
     url: String.raw`^https://kabutan\.jp/news/\?b=(k[\d]*)$`,
     xpath: '//title',
     redirect: 'https://kabutan.jp/stock/news?code={code}&b={$1}'
@@ -85,7 +84,8 @@ const LINKS = [
   */
   // 有名なとこ
   [ 'Y!',       'https://stocks.finance.yahoo.co.jp/stocks/detail/?code={code}' ],
-  [ '掲示板',   'http://messages.yahoo.co.jp/?action=q&board={code}' ],
+  [ 'Y板',      'http://messages.yahoo.co.jp/?action=q&board={code}' ],
+  [ '日経',     'http://www.nikkei.com/nkd/company/?scode={code}' ],
   [ '株探',     'https://kabutan.jp/stock/news?code={code}' ],
   // 業績・コンセンサス系
   [ 'IFIS',     'http://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report&bcode={code}' ],
@@ -162,14 +162,14 @@ function run(siteinfo)
 
 
   let showLinks = [];
-  
+
   for (let link of LINKS) {
     let [ title, url ] = link;
 
     if (url.indexOf(location.hostname) !== -1) {
       continue;
     }
-    
+
     url = replaceCode(url, code);
     showLinks.push(`<a href="${url}" target="_blank">${title}</a>`);
   }
