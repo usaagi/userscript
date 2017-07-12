@@ -84,7 +84,7 @@ const LINKS = [
   */
   // 有名なとこ
   [ 'Y!',       'https://stocks.finance.yahoo.co.jp/stocks/detail/?code={code}' ],
-  [ 'Y板',      'http://messages.yahoo.co.jp/?action=q&board={code}' ],
+  [ 'Y板',      'http://messages.yahoo.co.jp/?action=q&board={code}' ],    // http://messages.yahoo.co.jp/?action=q&board={code} か http://textream.yahoo.co.jp/rd/finance/{code}
   [ '日経',     'http://www.nikkei.com/nkd/company/?scode={code}' ],
   [ '株探',     'https://kabutan.jp/stock/news?code={code}' ],
   // 業績・コンセンサス系
