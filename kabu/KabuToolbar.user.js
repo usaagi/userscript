@@ -71,7 +71,6 @@ const SITES = [
   {   // ullet
     url: String.raw`http://www\.ullet\.com/(\d{4})\.html`,
   },
-
   // TODO: 楽天証券 SBI証券 の追加
 ];
 
@@ -91,6 +90,9 @@ const LINKS = [
   [ 'IFIS',     'http://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report&bcode={code}' ],
   [ 'iMarket',  'http://tyn-imarket.com/stocks/search?query={code}' ], // NOTE: 過去数年分の四半期の業績が見れる
   [ 'Ullet',    'http://www.ullet.com/{code}.html' ],
+  [ 'BF',       'https://www.buffett-code.com/company/{code}' ]
+  [ 'StockClip','https://www.stockclip.net/companies/{code}/performance'], 
+  // [ 'IR BANK',  'https://irbank.net/{code}' ],
   // 需給
   [ '空売り',   'http://karauri.net/{code}/' ],
   [ 'FISCO',    'https://web.fisco.jp/FiscoPFApl/CompanyTopWeb?brndCd=0{code}00' ],
@@ -109,6 +111,8 @@ const LINKS = [
   [ '企業分析', 'http://valuationmatrix.com/companies/{code}' ],   // 直感型企業分析システム ValuationMatrix (更新されてない)
   */
   // TODO: 日証金の速報系
+  [ '優待', 'https://www.invest-jp.net/yuutai/detail/{code}' ],
+
 ];
 
 
