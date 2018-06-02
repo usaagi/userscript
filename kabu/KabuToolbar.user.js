@@ -11,7 +11,7 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.8
+// @version     0.7.9
 // @run-at      document-end
 // ==/UserScript==
 
@@ -83,14 +83,14 @@ const LINKS = [
   */
   // 有名なとこ
   [ 'Y!',       'https://stocks.finance.yahoo.co.jp/stocks/detail/?code={code}' ],
-  [ 'Y板',      'http://textream.yahoo.co.jp/rd/finance/{code}' ],    // http://messages.yahoo.co.jp/?action=q&board={code}(廃止) か http://textream.yahoo.co.jp/rd/finance/{code}
+  [ 'Y板',      'http://textream.yahoo.co.jp/rd/finance/{code}' ], // http://messages.yahoo.co.jp/?action=q&board={code}(廃止) か http://textream.yahoo.co.jp/rd/finance/{code}
   [ '日経',     'http://www.nikkei.com/nkd/company/?scode={code}' ],
   [ '株探',     'https://kabutan.jp/stock/news?code={code}' ],
   // 業績・コンセンサス系
   [ 'IFIS',     'http://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report&bcode={code}' ],
   [ 'iMarket',  'http://tyn-imarket.com/stocks/search?query={code}' ], // NOTE: 過去数年分の四半期の業績が見れる
   [ 'Ullet',    'http://www.ullet.com/{code}.html' ],
-  [ 'BF',       'https://www.buffett-code.com/company/{code}' ]
+  [ 'BF',       'https://www.buffett-code.com/company/{code}' ],
   [ 'StockClip','https://www.stockclip.net/companies/{code}/performance'], 
   // [ 'IR BANK',  'https://irbank.net/{code}' ],
   // 需給
