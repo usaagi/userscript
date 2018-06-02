@@ -9,3 +9,4 @@
 // ==/UserScript==
 
 location.replace(location.href.replace('/kabutan.jp/disclosures/pdf/', '/211.6.211.247/tdnet/data/').replace(/\/$/, '.pdf'));
+
