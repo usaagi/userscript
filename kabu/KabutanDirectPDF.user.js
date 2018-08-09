@@ -3,9 +3,10 @@
 // @description 株探内のPDFを従来のように直接表示します。
 // @namespace   usagi2
 // @include     https://kabutan.jp/stock/news?code=*
+// @include     https://kabutan.jp/disclosures/*
 // @run-at      document-end
 // @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabutanDirectPDF.user.js
-// @version     0.2.1
+// @version     0.2.2
 // ==/UserScript==
 
 // a[target="pdf"]
@@ -15,7 +16,6 @@ let links = document.querySelectorAll('a[href*="://kabutan.jp/disclosures/pdf/"]
 for (let i = 0; i < links.length; i++) {
     links[i].setAttribute('href', links[i].getAttribute('href').replace('/kabutan.jp/disclosures/pdf/', '/211.6.211.247/tdnet/data/').replace(/\/$/, '.pdf'));
 }
-
 
 
 // @include     http://kabutan.jp/disclosures/pdf/*/*/
