@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        楽天
 // @description テレコンを普通のブラウザで利用
-// @namespace   usagi2
+// @namespace   usagi
 // @include     https://member.rakuten-sec.co.jp/app/*.do;BV_SessionID=*
 // @version     0.1
 // @run-at      document-end
