@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        株ツールバー
 // @description 株関連サイトで便利なリンクをページ最下部に表示します。
-// @namespace   usagi2
+// @namespace   usaagi
 // @include     https://stocks.finance.yahoo.co.jp/stocks/*/?code=*
 // @include     https://textream.yahoo.co.jp/message/*/*
 // @include     https://kabutan.jp/stock/*?code=*
@@ -11,11 +11,9 @@
 // @include     http://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     http://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.7.9
+// @version     0.8
 // @run-at      document-end
 // ==/UserScript==
-
-// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabuToolbar.user.js
 
 (function () {
 'use strict';
