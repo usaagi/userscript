@@ -1,11 +1,10 @@
 // ==UserScript==
 // @name        株探ダイレクトPDF
 // @description 株探内のPDFを従来のように直接表示します。
-// @namespace   usagi2
+// @namespace   usagi
 // @include     https://kabutan.jp/stock/news?code=*
 // @include     https://kabutan.jp/disclosures/*
 // @run-at      document-end
-// @downloadURL https://raw.githubusercontent.com/usagi2/userscript/master/kabu/KabutanDirectPDF.user.js
 // @version     0.2.2
 // ==/UserScript==
 
