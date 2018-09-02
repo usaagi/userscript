@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        株ツールバー
 // @description 株関連サイトで便利なリンクをページ最下部に表示します。
-// @namespace   usaagi
+// @namespace   usagi
 // @include     https://stocks.finance.yahoo.co.jp/stocks/*/?code=*
 // @include     https://textream.yahoo.co.jp/message/*/*
 // @include     https://kabutan.jp/stock/*?code=*
