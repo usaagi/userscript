@@ -97,7 +97,7 @@ const LINKS = [
     // 大株主
     [ 'EDINET',   'https://disclosure.edinet-fsa.go.jp/E01EW/BLMainController.jsp?uji.verb=W1E63010CXW1E6A010DSPSch&uji.bean=ee.bean.parent.EECommonSearchBean&TID=W1E63011&PID=W1E63010&SESSIONKEY=1436004792327&lgKbn=2&pkbn=0&skbn=0&dskb=&dflg=0&iflg=0&preId=1&row=100&idx=0&syoruiKanriNo=&mul={code}&fls=on&lpr=on&oth=on&cal=1&era=H&yer=&mon=&pfs=4' ],
     [ '株主プロ', 'http://www.kabupro.jp/code/{code}.htm' ],
-    [ '大量保有', 'https://maonline.jp/shareholding_reports?utf8=%E2%9C%93&query%5Bfildate_gteq%5D=&query%5Bfildate_lteq%5D=&query%5Bisname_or_issyokencode_or_company_iscode_start%5D={code}&query%5Bcompany_edgyosyucode_in%5D%5B%5D=&query%5Bholdingname_or_holdingcode_start%5D=' ],
+    [ '大量保有', 'https://maonline.jp/pro/shareholding_reports?utf8=%E2%9C%93&query%5Bfildate_gteq%5D=2018-05-21&query%5Bfildate_lteq%5D=2012-01-1&query%5Bisname_or_issyokencode_or_company_iscode_start%5D={code}&query%5Bcompany_edgyosyucode_in%5D%5B%5D=&query%5Bholdingname_or_holdingcode_start%5D=' ],
     [ '有報速報', 'https://toushi.kankei.me/search/{code}' ],
     [ 'Mstar',    'http://portal.morningstarjp.com/StockInfo/info/index/{code}' ], // 指標
     // http://www.morningstar.co.jp/StockInfo/info/fund/{code}', // ファンド組入
