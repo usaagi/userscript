@@ -10,7 +10,7 @@
 // @include     https://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     https://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.9.2
+// @version     0.9.3
 // @run-at      document-end
 // ==/UserScript==
 
@@ -80,7 +80,6 @@ const LINKS = [
     */
     // 有名なとこ
     [ 'Y!',       'https://stocks.finance.yahoo.co.jp/stocks/detail/?code={code}' ],
-    7974
     [ 'Y板',      'https://finance.yahoo.co.jp/cm/rd/finance/{code}' ], // http://messages.yahoo.co.jp/?action=q&board={code}(廃止) か http://textream.yahoo.co.jp/rd/finance/{code}
     [ '日経',     'https://www.nikkei.com/nkd/company/?scode={code}' ],
     [ '株探',     'https://kabutan.jp/stock/news?code={code}' ],
@@ -178,9 +177,7 @@ const run = (siteinfo) => {
 
     let showLinks = [];
 
-    for (let link of LINKS) {
-        let [ title, url ] = link;
-
+    for (let [ title, url ] of LINKS) {
         // 同じドメインの項目は非表示
         if (url.indexOf(location.hostname) !== -1) {
             continue;
