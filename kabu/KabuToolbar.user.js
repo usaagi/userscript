@@ -2,7 +2,7 @@
 // @name        株ツールバー
 // @description 株関連サイトで便利なリンクをページ最下部に表示します。
 // @namespace   usaagi
-// @include     https://*finance.yahoo.co.jp/*
+// @include     https://finance.yahoo.co.jp/quote/*
 // @include     https://kabutan.jp/stock/*?code=*
 // @include     https://kabutan.jp/news/?b=*
 // @include     https://karauri.net/*/*
@@ -10,7 +10,7 @@
 // @include     https://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     https://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.9.1
+// @version     0.9.2
 // @run-at      document-end
 // ==/UserScript==
 
@@ -36,7 +36,7 @@ const STYLE = 'padding: 5px; margin-bottom: 15px; width: 100%; text-align: cente
 */
 const SITES = [
     {	// yahoo ファイナンス
-        url: String.raw`https://stocks\.finance\.yahoo\.co\.jp/stocks/.*/\?code=(\d{4})`,
+        url: String.raw`https://finance\.yahoo\.co\.jp/quote/(\d{4})\.`,
     },
     {   // yahoo textrem
         url: String.raw`https://finance\.yahoo\.co\.jp/cm/message/\d+/[\d\w]+(/.*)?$`,
@@ -80,7 +80,8 @@ const LINKS = [
     */
     // 有名なとこ
     [ 'Y!',       'https://stocks.finance.yahoo.co.jp/stocks/detail/?code={code}' ],
-    [ 'Y板',      'https://textream.yahoo.co.jp/rd/finance/{code}' ], // http://messages.yahoo.co.jp/?action=q&board={code}(廃止) か http://textream.yahoo.co.jp/rd/finance/{code}
+    7974
+    [ 'Y板',      'https://finance.yahoo.co.jp/cm/rd/finance/{code}' ], // http://messages.yahoo.co.jp/?action=q&board={code}(廃止) か http://textream.yahoo.co.jp/rd/finance/{code}
     [ '日経',     'https://www.nikkei.com/nkd/company/?scode={code}' ],
     [ '株探',     'https://kabutan.jp/stock/news?code={code}' ],
     // 業績・コンセンサス系
