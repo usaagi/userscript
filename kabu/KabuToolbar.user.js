@@ -10,7 +10,7 @@
 // @include     https://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     https://shikiho.jp/tk/stock/info/*
 // @include     http://www.ullet.com/*.html
-// @version     0.9.3
+// @version     0.9.4
 // @run-at      document-end
 // ==/UserScript==
 
