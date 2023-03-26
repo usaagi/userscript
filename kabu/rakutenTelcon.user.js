@@ -22,7 +22,7 @@ if (m) {
     //  console.dir(document.getElementById('siteID').getElementsByTagName('a')[0].getAttribute('href'));
        
     let div = document.createElement('div');
-    div.innerHTML = `<a href="https://member.rakuten-sec.co.jp/bv/app/info_jp_nikkei_telecom.do;BV_SessionID=${session_id}?eventType=init&agreeFlg=0">日経テレコンへ</a>`;
+    div.innerHTML = `<a href="https://member.rakuten-sec.co.jp/bv/app/info_jp_nikkei_telecom.do;BV_SessionID=${session_id}?eventType=init&agreeFlg=0" target="_blank">日経テレコンへ</a>`;
     div.setAttribute('style', 'padding: 10px; text-align: right;');
 
     // 上部に表示させるには insertBefore 下部は appendChild
