@@ -87,9 +87,9 @@ const LINKS = [
     [ '日経', 'https://www.nikkei.com/nkd/company/?scode={code}' ],
     [ '株探', 'https://kabutan.jp/stock/news?code={code}' ],
     // 業績・コンセンサス系
-    [ 'マSC', 'https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode={code}' ], // マネックス銘柄スカウター (初回ログイン必須)
     [ 'IFIS', 'https://kabuyoho.ifis.co.jp/index.php?action=tp1&sa=report&bcode={code}' ],
     [ 'iMarket', 'http://tyn-imarket.com/stocks/search?query={code}' ], // NOTE: 過去数年分の四半期の業績が見れる
+    [ 'マSC', 'https://monex.ifis.co.jp/index.php?sa=report_zaimu&bcode={code}' ], // マネックス銘柄スカウター (初回ログイン必須)
     [ 'Ullet', 'http://www.ullet.com/{code}.html' ],
     [ 'BF', 'https://www.buffett-code.com/company/{code}' ],
     [ 'StockClip','https://www.stockclip.net/companies/{code}/performance'], 
@@ -99,6 +99,7 @@ const LINKS = [
     [ 'FISCO', 'https://web.fisco.jp/FiscoPFApl/CompanyTopWeb?brndCd=0{code}00' ],
     [ '株テク', 'http://www.kabutec.jp/company/fs_{code}.html' ],  // EBITDAとか
     // 大株主
+    // edinet2 'https://disclosure2.edinet-fsa.go.jp/WEEE0030.aspx?' + btoa('mul={code}&ctf=off&fls=on&lpr=on&rpr=off&oth=off&yer=&mon=&pfs=6&ser=1&pag=1&sor=2')
     [ 'EDINET', 'https://disclosure.edinet-fsa.go.jp/E01EW/BLMainController.jsp?uji.verb=W1E63010CXW1E6A010DSPSch&uji.bean=ee.bean.parent.EECommonSearchBean&TID=W1E63011&PID=W1E63010&SESSIONKEY=1436004792327&lgKbn=2&pkbn=0&skbn=0&dskb=&dflg=0&iflg=0&preId=1&row=100&idx=0&syoruiKanriNo=&mul={code}&fls=on&lpr=on&oth=on&cal=1&era=H&yer=&mon=&pfs=4' ],
     [ '株主プロ', 'http://www.kabupro.jp/code/{code}.htm' ],
     [ '大量保有', 'https://maonline.jp/pro/shareholding_reports?utf8=%E2%9C%93&query%5Bfildate_gteq%5D=2018-05-21&query%5Bfildate_lteq%5D=2012-01-1&query%5Bisname_or_issyokencode_or_company_iscode_start%5D={code}&query%5Bcompany_edgyosyucode_in%5D%5B%5D=&query%5Bholdingname_or_holdingcode_start%5D=' ],
