@@ -2,11 +2,11 @@
 // @name        株探ダイレクトPDF
 // @description 株探内のPDFへのリンクを直接表示できるリンクに変換します。
 // @namespace   usaagi
-// @include     https://kabutan.jp/stock/news?code=*
-// @include     https://kabutan.jp/stock/news/?code=*
-// @include     https://kabutan.jp/disclosures/*
+// @match       https://kabutan.jp/stock/news?code=*
+// @match       https://kabutan.jp/stock/news/?code=*
+// @match       https://kabutan.jp/disclosures/*
 // @run-at      document-end
-// @version     0.6
+// @version     0.7
 // ==/UserScript==
 
 let links = document.querySelectorAll('a[href^="https://kabutan.jp/disclosures/pdf/"]');
