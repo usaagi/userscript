@@ -9,8 +9,9 @@
 // @include     https://www.nikkei.com/markets/company/*?scode=*
 // @include     https://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     https://shikiho.jp/tk/stock/info/*
+// @include     https://irbank.net/*
 // @include     http://www.ullet.com/*.html
-// @version     0.9.4
+// @version     0.9.5
 // @run-at      document-end
 // ==/UserScript==
 
@@ -49,6 +50,9 @@ const SITES = [
         url: String.raw`^https://kabutan\.jp/news/\?b=(k[\d]*)$`,
         xpath: '//title',
         redirect: 'https://kabutan.jp/stock/news?code={code}&b={$1}'
+    },
+    {   // IR Bank
+        url: String.raw`https://irbank.net/(\d{4})/?`,
     },
     {   // 空売り.net
         url: String.raw`https://karauri.net/(\d{4})/`,
@@ -95,7 +99,8 @@ const LINKS = [
     [ 'StockClip','https://www.stockclip.net/companies/{code}/performance'], 
     // [ 'IR BANK',  'https://irbank.net/{code}' ],
     // 需給
-    [ '空売り', 'https://karauri.net/{code}/' ],
+    [ '空売り', 'https://irbank.net/{code}/short'], // IR Bank
+    // [ '空売り', 'https://karauri.net/{code}/' ],
     [ 'FISCO', 'https://web.fisco.jp/FiscoPFApl/CompanyTopWeb?brndCd=0{code}00' ],
     [ '株テク', 'http://www.kabutec.jp/company/fs_{code}.html' ],  // EBITDAとか
     // 大株主
