@@ -2,15 +2,15 @@
 // @name        株ツールバー
 // @description 株関連サイトで便利なリンクをページ最下部に表示します。
 // @namespace   usaagi
-// @include     https://finance.yahoo.co.jp/quote/*
-// @include     https://kabutan.jp/stock/*?code=*
-// @include     https://kabutan.jp/news/?&b=*
-// @include     https://karauri.net/*/*
-// @include     https://www.nikkei.com/markets/company/*?scode=*
-// @include     https://www.morningstar.co.jp/StockInfo/info/*/*
-// @include     https://shikiho.jp/tk/stock/info/*
-// @include     https://irbank.net/*
-// @include     http://www.ullet.com/*.html
+// @match       https://finance.yahoo.co.jp/quote/*
+// @match       https://kabutan.jp/stock/*?code=*
+// @match       https://kabutan.jp/news/?&b=*
+// @match       https://karauri.net/*/*
+// @match       https://www.nikkei.com/markets/company/*?scode=*
+// @match       https://www.morningstar.co.jp/StockInfo/info/*/*
+// @match       https://shikiho.jp/tk/stock/info/*
+// @match       https://irbank.net/*
+// @match       http://www.ullet.com/*.html
 // @version     0.9.7
 // @run-at      document-end
 // ==/UserScript==
