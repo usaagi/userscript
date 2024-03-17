@@ -4,14 +4,14 @@
 // @namespace   usaagi
 // @include     https://finance.yahoo.co.jp/quote/*
 // @include     https://kabutan.jp/stock/*?code=*
-// @include     https://kabutan.jp/news/?b=*
+// @include     https://kabutan.jp/news/?&b=*
 // @include     https://karauri.net/*/*
 // @include     https://www.nikkei.com/markets/company/*?scode=*
 // @include     https://www.morningstar.co.jp/StockInfo/info/*/*
 // @include     https://shikiho.jp/tk/stock/info/*
 // @include     https://irbank.net/*
 // @include     http://www.ullet.com/*.html
-// @version     0.9.6
+// @version     0.9.7
 // @run-at      document-end
 // ==/UserScript==
 
