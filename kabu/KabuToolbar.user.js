@@ -11,7 +11,7 @@
 // @include     https://shikiho.jp/tk/stock/info/*
 // @include     https://irbank.net/*
 // @include     http://www.ullet.com/*.html
-// @version     0.9.5
+// @version     0.9.6
 // @run-at      document-end
 // ==/UserScript==
 
@@ -47,7 +47,7 @@ const SITES = [
         url: String.raw`https://kabutan\.jp/stock/.*\?code=(\d{4})`,
     },
     { // 株探 > 決算速報からのリンクを通常の決算ページにリダイレクト (決算速報だとperなどが表示されないので)
-        url: String.raw`^https://kabutan\.jp/news/\?b=(k[\d]*)$`,
+        url: String.raw`^https://kabutan\.jp/news/\?&b=(k[\d]*)$`,
         xpath: '//title',
         redirect: 'https://kabutan.jp/stock/news?code={code}&b={$1}'
     },
