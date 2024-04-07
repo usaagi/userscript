@@ -4,7 +4,7 @@
 // @namespace   usaagi
 // @match       https://kabutan.jp/stock/*?code=*
 // @run-at      document-end
-// @version     0.1
+// @version     0.2
 // ==/UserScript==
 
 'use strict'
@@ -46,10 +46,11 @@ const element = document.querySelector('#stockinfo_i1 > div.si_i1_3 > div.kabuka
 const newRatioElement = document.createElement('span')
 newRatioElement.className = ratio > 0 ? 'up' : 'down'
 newRatioElement.textContent = `(${sign}${ratio.toFixed(2)}%) `
+element.insertBefore(newRatioElement, element.firstChild)
 
+/*
 const newDiffElement = document.createElement('span')
 newDiffElement.className = ratio > 0 ? 'up' : 'down'
 newDiffElement.textContent = `${sign}${diffPrice.toFixed(currentPrice > 5000 ? 0 : 1)} `
-
-element.insertBefore(newRatioElement, element.firstChild)
 element.insertBefore(newDiffElement, element.firstChild)
+*/
