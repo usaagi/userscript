@@ -3,8 +3,9 @@
 // @description 株探の決算速報ページの決算タイトルを強調表示します。
 // @namespace   usaagi
 // @match       https://kabutan.jp/news/
+// @match       https://kabutan.jp/news/?page=*
 // @run-at      document-end
-// @version     0.1
+// @version     0.2
 // ==/UserScript==
 
 'use strict'
@@ -21,6 +22,7 @@ const highlightStrings = {
     '一転赤字': {color: 'red', weight: 'bold'},
     '赤字転落': {color: 'red', weight: 'bold'},
     '赤字拡大': {color: 'red'},
+    '無配転落': {color: 'red'},
     '\\d+\\.?\\d*倍': {color: 'black', size: '1.2em', weight: 'bold'},
 }
 
@@ -31,7 +33,7 @@ for (const link of links) {
         const regex = new RegExp(str, 'g')
         if (regex.test(link.textContent)) {
             const p = highlightStrings[str]
-            const styledStr = `<span style="` + (p.color ? `color:${p.color};` : '') + (p.size ? `font-size: ${p.size};` : '') + (p.weight ? `font-weight: ${p.weight};` : '') + `">$&</span>`
+            const styledStr = '<span style="' + (p.color ? `color:${p.color};` : '') + (p.size ? `font-size: ${p.size};` : '') + (p.weight ? `font-weight: ${p.weight};` : '') + '">$&</span>'
             link.innerHTML = link.innerHTML.replace(regex, styledStr)
         }
     }
