@@ -11,7 +11,7 @@
 // @match       https://shikiho.jp/tk/stock/info/*
 // @match       https://irbank.net/*
 // @match       http://www.ullet.com/*.html
-// @version     1.0
+// @version     1.1
 // @run-at      document-end
 // ==/UserScript==
 
@@ -178,7 +178,7 @@ const getCode = (siteinfo) => {
 
 const getRedirectUrl = (siteinfo, code) => {
     const matches = location.href.match(isRegex(siteinfo.url) ? siteinfo.url : new RegExp(siteinfo.url))
-    let url = replaceCode(siteinfo.redirect, code)
+    let url = replaceLinkPlaceholder(siteinfo.redirect, code)
 
     for (let i = 1; i <= matches.length; i++) {
         url = url.replace('{$' + i + '}', matches[i])
